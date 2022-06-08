@@ -1,5 +1,5 @@
-var files_currentPath = "/";
-var files_filter_sd_list = false;
+var files_currentPath = "/gcode";
+var files_filter_sd_list = true;
 var files_file_list = [];
 var files_file_list_cache = [];
 var files_status_list = [];
