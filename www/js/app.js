@@ -279,9 +279,7 @@ function Handle_DHT(data) {
     console.log("DHT data invalid: " + data);
     return;
   }
-  var temp = convertDHT2Fahrenheit
-    ? parseFloat(tdata[0]) * 1.8 + 32
-    : parseFloat(tdata[0]);
+  var temp = convertDHT2Fahrenheit ? parseFloat(tdata[0]) * 1.8 + 32 : parseFloat(tdata[0]);
   document.getElementById("DHT_humidity").innerHTML =
     parseFloat(tdata[1]).toFixed(2).toString() + "%";
   var temps = temp.toFixed(2).toString() + "&deg;";
@@ -575,7 +573,8 @@ function update_UI_firmware_target() {
     SETTINGS_STA_MODE = 2;
   }
   if (typeof document.getElementById("fwName") != "undefined")
-    document.getElementById("fwName").innerHTML = fwName;
+    // document.getElementById("fwName").innerHTML = fwName;
+    document.getElementById("fwName").innerHTML = esp_hostname;
   //SD image or not
   if (direct_sd && typeof document.getElementById("showSDused") != "undefined")
     document.getElementById("showSDused").innerHTML =
