@@ -573,7 +573,8 @@ function update_UI_firmware_target() {
     SETTINGS_STA_MODE = 2;
   }
   if (typeof document.getElementById("fwName") != "undefined")
-    document.getElementById("fwName").innerHTML = fwName;
+    // document.getElementById("fwName").innerHTML = fwName;
+    document.getElementById("fwName").innerHTML = esp_hostname;
   //SD image or not
   if (direct_sd && typeof document.getElementById("showSDused") != "undefined")
     document.getElementById("showSDused").innerHTML =
